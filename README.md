@@ -69,11 +69,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
-   <Route path='/' element={<Home />} />
-        <Route path='/projet-1' element={<Project1 />} />
-        <Route path='/projet-2' element={<Project2 />} />
-        <Route path='/projet-3' element={<Project3 />} />
-        <Route path='/projet-4' element={<Project4 />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/*' element={<NotFound />} />
