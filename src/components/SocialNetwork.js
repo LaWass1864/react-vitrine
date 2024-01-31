@@ -8,7 +8,7 @@ const SocialNetwork = () => {
         // Pour chaque icons de reseau sociaux
         icons.forEach((link) => {
             link.addEventListener("mouseover", (e) => {
-                link.style.transform = `translate(${e.offsetX - 20}px, ${e.offsetY - 13}px)`;
+                link.style.transform = `translate(${e.offsetX - 20}px, ${e.offsetY - 20}px)`;
             });
 
             link.addEventListener("mouseleave", () => {

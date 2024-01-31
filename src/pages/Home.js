@@ -15,7 +15,8 @@ const Home = () => {
                 <div className="home-main">
                     <div className="main-content">
                         <h1> Wass Porfolio </h1>
-                        <h2><DynamicText /></h2>
+                        <h2> <DynamicText /></h2>
+                      
                     </div>
                 </div>
             </div>
