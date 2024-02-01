@@ -10,7 +10,7 @@ import Project4 from './pages/Project4';
 
 const App = () => {
   return (
-
+//  relier toutes les pages du site
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
