@@ -27,21 +27,34 @@ const DynamicText = () => {
       //  animation des lettres 
       letter.style.animation = "anim 5s ease forwards";
       // notre span va contenir le tableau array et ses index
-      letter.textContent = array[1][3];
+      letter.textContent = array[1];
 
       setTimeout(() => {
         letter.remove();
       }, 2000);
     };
-    createLetter();
+    //  fonction recursive
+    const loop = () => {
+      setTimeout(() => {
+        //  passer au mot suivant 
+        if (letterIndex > array[wordIndex.l]) {
+
+        }
+        // jouer la fonction
+        createLetter();
+        letterIndex++;
+        loop();
+      }, 80);
+    }
+    loop()
   }, []);
 
   return (
     <span className="dynamic-text">
-      <span>Simply</span>
+      <span>Hello</span>
       <span id="text-target"></span>
     </span>
   );
-  }
+}
 
 export default DynamicText;
