@@ -15,7 +15,9 @@ const App = () => {
   return (
 //  relier toutes les pages du site
     <BrowserRouter>
+    {/* liste des route */}
       <Routes>
+        {/* les chemins */}
         <Route path='/' element={<Home />} />
         <Route path='/projet-1' element={<Project1 />} />
         <Route path='/projet-2' element={<Project2 />} />
