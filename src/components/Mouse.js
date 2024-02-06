@@ -16,6 +16,11 @@ const Mouse = () => {
             //  quand tu link est survolé tu lui ajoutes la classe .hovered
             link.addEventListener('mouseover', () => {
                 cursor.classList.add("hovered")
+            });
+            // quand tu n'es plus sur les link, tu reprend ta taille normal
+            link.addEventListener('mouseleave', () => {
+                cursor.style.transition = ".3s ease-out"
+                cursor.classList.remove('hovered');
             })
         });
 

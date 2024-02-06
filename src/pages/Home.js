@@ -12,6 +12,7 @@ const Home = () => {
             <Mouse />
             {/*  menu */}
             <Navigation />
+            <SocialNetwork />
          
         </div>
     );
