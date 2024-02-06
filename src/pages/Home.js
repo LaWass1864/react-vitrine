@@ -8,6 +8,7 @@ import Mouse from '../components/Mouse';
 const Home = () => {
     return (
         <div>
+            {/* la souris est dans ce fichier pour l'appeller dans chaque page */}
             <Mouse />
             {/*  menu */}
             <Navigation />
