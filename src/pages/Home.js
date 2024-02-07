@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import SocialNetwork from '../components/SocialNetwork';
 import Mouse from '../components/Mouse';
 import DynamicText from '../components/DynamicText';
+import Buttons from '../components/Buttons';
 
 
 // La souris est ici car si nous la mettons dans App.js ca poserai pb
@@ -24,6 +25,7 @@ const Home = () => {
                         <h2><DynamicText /></h2>
                     </div>
                 </div>
+                <Buttons right={"/projet-1"} />
             </div>
         </div>
     );

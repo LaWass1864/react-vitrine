@@ -4,7 +4,7 @@ const DynamicText = () => {
     useEffect(() => {
         //  ou on va injecter le mot
         const target = document.getElementById("text-target")
-        let array = ["smart", "strong", "sweety", "beauty"]
+        let array = ["cool", "determinated", "curious", "funny"]
         //  sur quel mot on est
         let wordIndex = 0;
         //  sur quelle lettre nous sommes
@@ -20,7 +20,7 @@ const DynamicText = () => {
             letter.classList.add("letter");
             // animation des lettres
             letter.style.opacity = "0"
-            letter.style.animation = "anim 2.5s ease forwards";
+            letter.style.animation = "anim 5s ease forwards";
             letter.textContent = array[wordIndex][letterIndex];
 
             setTimeout(() => {
@@ -31,9 +31,22 @@ const DynamicText = () => {
         // fonction recursive
         const loop = () => {
             setTimeout(() => {
-                createLetter();
-                letterIndex++;
-                loop()
+                if (wordIndex >= array.length) {
+                    wordIndex = 0;
+                    letterIndex = 0;
+                    loop();
+                    //  on passe au mot suivant
+                } else if (letterIndex < array[wordIndex].length) {
+                    createLetter();
+                    letterIndex++;
+                    loop();
+
+                } else {
+                    letterIndex = 0;
+                    wordIndex++;
+                    setTimeout(loop, 2000)
+
+                }
             }, 80);
         }
         loop()
