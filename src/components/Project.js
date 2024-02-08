@@ -11,7 +11,7 @@ const Project = ({ projectNumber }) => {
     useEffect(() => {
         setLeft(Math.floor(Math.random() * 200 + 700) + "px")
         setTop(Math.floor(Math.random() * 200 + 150) + "px")
-        setSize("scale '" + (Math.random()))
+        setSize("scale '" + (Math.random() + 0.7 ) + "")
      
     }, [])
     return (
