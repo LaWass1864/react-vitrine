@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { projectsData } from "../data/projectsData";
 
 const Project = ({ projectNumber }) => {
     //  on va aller recuperer la BDD
-    const [currentProject] = useState(projectsData[projectNumber])
+    const [currentProject] = useState(projectsData[projectNumber]);
+    const [left, setLeft] = useState();
+    const [top, setTop] = useState();
+    const [size, setSize] = useState();
 
+    useEffect(() => {
+        setLeft(Math.floor(Math.random() * 200 + 700) + "px")
+        setTop(Math.floor(Math.random() * 200 + 150) + "px")
+        setSize("scale '" + (Math.random()))
+     
+    }, [])
     return (
         //   On va aller chercher nos projets 
         <div className="project-main">
@@ -20,17 +29,24 @@ const Project = ({ projectNumber }) => {
             </div>
             <div className="img-content">
                 <div className='img-container hover'>
-
                     <span>
                         <h3> {currentProject.title}</h3>
                         <p> {currentProject.infos}</p>
                     </span>
-                    <img 
-                    src={currentProject.img} 
-                    alt={currentProject.title}
-                    className='img'/>
+                    <img
+                        src={currentProject.img}
+                        alt={currentProject.title}
+                        className='img' />
+                </div>
+                <div className="button-container">
+                    <a
+                        href={currentProject.link} target="_blank"
+                        rel="noopener noreferrer" class="hover">
+                        <span className="button">Voir le site</span>
+                    </a>
                 </div>
             </div>
+            <span className='random-circle' style={{ left, top, transform: size }}></span>
         </div>
 
     )
