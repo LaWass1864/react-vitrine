@@ -9,7 +9,7 @@ const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
-        const formMess = document.querySelector(".form-message")
+        const formMess = document.querySelector(".formMessage")
 
         emailjs.sendForm(
             // identifiant du service
@@ -52,7 +52,7 @@ const form = useRef();
                 <input type="submit" value="Envoyer" className='button' />
             </form>
             {/* ajouter un message si c'est reussi ou non  */}
-            <div className="form-message"></div>
+            <div className="formMessage"></div>
         </div>
     );
 };
