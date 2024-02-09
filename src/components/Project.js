@@ -9,10 +9,11 @@ const Project = ({ projectNumber }) => {
     const [size, setSize] = useState();
 
     useEffect(() => {
-        setLeft(Math.floor(Math.random() * 200 + 700) + "px")
-        setTop(Math.floor(Math.random() * 200 + 150) + "px")
-        setSize("scale '" + (Math.random() + 0.7 ) + "")
-     
+        // Animation des cercles 
+        setLeft(Math.floor(Math.random() * 200 + 700) + "px");
+        setTop(Math.floor(Math.random() * 200 + 150) + "px");
+        setSize("scale ('" + (Math.random() + 0.7) + ")")
+
     }, [])
     return (
         //   On va aller chercher nos projets 
