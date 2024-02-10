@@ -55,7 +55,7 @@ const DynamicText = () => {
     return (
         <div>
             <span className="dynamic-text">
-                Hello
+                I am
                 {/*  on va integrer les mots dans ce span */}
                 <span id="text-target"></span>
             </span>

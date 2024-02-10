@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "Questrial";
+  font-family: "font-1";
   src: url(../assets/fonts/Questrial-Regular.ttf);
 }
 @font-face {
-  font-family: "Michroma";
+  font-family: "font-2";
   src: url(../assets/fonts/Michroma-Regular.ttf);
 }
 
-$font-1: "Questrial", sans-serif;
-$font-2: "Michroma", serif;
+$font-1: "font-1", sans-serif;
+$font-2: "font-2", serif;
 
 $color-1: #fafeff;
 $color-2: #00c1ec;

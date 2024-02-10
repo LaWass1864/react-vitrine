@@ -4,15 +4,36 @@ import SocialNetwork from '../components/SocialNetwork';
 import Mouse from '../components/Mouse';
 import DynamicText from '../components/DynamicText';
 import Buttons from '../components/Buttons';
+import { motion } from 'framer-motion';
 
 
 // La souris est ici car si nous la mettons dans App.js ca poserai pb
 const Home = () => {
     {/* la souris est dans ce fichier pour l'appeller dans chaque page */ }
+    const variants = {
+        initial: {
+            opacity: 0,
+            transition: { duration: 0.5 },
+            x: 100,
+        },
+        visible: {
+            opacity: 1,
+            x: 0
+        },
+        exit: {
+            opacity: 0,
+            transition: { duration: 0.3 },
+            x: -100,
+        }
+    }
     return (
         <div>
             <Mouse />
-            <div className="home">
+            <motion.div className="home" initial='initial'
+                animate='visible'
+                exit="exit"
+                variants={variants}
+            >
                 {/*  menu */}
                 <Navigation />
                 <SocialNetwork />
@@ -20,13 +41,33 @@ const Home = () => {
                 }
                 <div className="home-main">
                     <div className="main-content">
-                        <h1> Wass Porfolio </h1>
+                        <motion.h1
+                            drag
+                            onDragEnd
+                            dragConstraints={{
+                                left: -250,
+                                right: 950,
+                                top: -200,
+                                bottom: 250,
+                            }}> Wass Porfolio </motion.h1>
                         {/* on injectera tout ce qu'on veut dans le DynamicText */}
-                        <h2><DynamicText /></h2>
+                        <motion.h2
+                            drag
+                            onDragEnd
+                            dragConstraints={{
+                                left: -250,
+                                right: 950,
+                                top: -200,
+                                bottom: 250,
+
+                            }}>
+
+                            <DynamicText />
+                        </motion.h2>
                     </div>
                 </div>
                 <Buttons right={"/projet-1"} />
-            </div>
+            </motion.div>
         </div>
     );
 };

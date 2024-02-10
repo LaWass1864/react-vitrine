@@ -10,11 +10,13 @@ import Project1 from './pages/Project1';
 import Project2 from './pages/Project2';
 import Project3 from './pages/Project3';
 import Project4 from './pages/Project4';
+import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
   return (
 //  relier toutes les pages du site
     <BrowserRouter>
+    <AnimatePresence>
     {/* liste des route */}
       <Routes>
         {/* les chemins */}
@@ -25,8 +27,8 @@ const App = () => {
         <Route path='/projet-4' element={<Project4 />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/*' element={<NotFound />} />
-
       </Routes>
+        </AnimatePresence>
     </BrowserRouter>
 
   );
