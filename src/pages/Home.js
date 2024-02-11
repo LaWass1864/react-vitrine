@@ -10,6 +10,11 @@ import { motion } from 'framer-motion';
 // La souris est ici car si nous la mettons dans App.js ca poserai pb
 const Home = () => {
     {/* la souris est dans ce fichier pour l'appeller dans chaque page */ }
+
+    const handleDragEnd = () => {
+        // Code à exécuter lorsque le glisser-déposer se termine
+        console.log("Drag ended");
+    };
     const variants = {
         initial: {
             opacity: 0,
@@ -43,7 +48,7 @@ const Home = () => {
                     <div className="main-content">
                         <motion.h1
                             drag
-                            onDragEnd
+                            onDragEnd={handleDragEnd}
                             dragConstraints={{
                                 left: -250,
                                 right: 950,
@@ -53,7 +58,7 @@ const Home = () => {
                         {/* on injectera tout ce qu'on veut dans le DynamicText */}
                         <motion.h2
                             drag
-                            onDragEnd
+                            onDragEnd={handleDragEnd}
                             dragConstraints={{
                                 left: -250,
                                 right: 950,
